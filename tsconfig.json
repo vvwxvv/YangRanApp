@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+    "target": "ES2017",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": false,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "baseUrl": "./",
+    "incremental": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "paths": {
+      "@/*": ["./src/*","./utils/*","./*"]
+    },
+    "strictNullChecks": true
+  },
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/test/page.js", "src/components/navs/DotMenu.jsx", "src/components/patterns/SpiralPattern.jsx", "src/components/patterns/RadialPattern.jsx", "src/components/patterns/FractalPattern.jsx", "src/components/patterns/FlowPattern.jsx", "src/components/patterns/FieldPattern.jsx", "src/hooks/useAsyncAction.js"],
+  "exclude": ["node_modules"]
+}

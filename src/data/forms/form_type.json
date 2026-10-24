@@ -1,0 +1,81 @@
+{
+    "artwork": [
+      { "id": "artwork_video",            "value": "video",          "label_en": "Video",         "label_cn": "录像",     "priority": 1 },
+      { "id": "artwork_moving_images",    "value": "moving_images",  "label_en": "Moving Images", "label_cn": "影像",     "priority": 2 },
+      { "id": "artwork_installation",     "value": "installation",   "label_en": "Installation",  "label_cn": "装置",     "priority": 3 },
+      { "id": "artwork_mixed_media",      "value": "mixed_media",    "label_en": "Mixed Media",   "label_cn": "综合材料", "priority": 4 },
+      { "id": "artwork_photography",      "value": "photography",    "label_en": "Photography",   "label_cn": "摄影",     "priority": 5 },
+      { "id": "artwork_sculpture",        "value": "sculpture",      "label_en": "Sculpture",     "label_cn": "雕塑",     "priority": 6 },
+      { "id": "artwork_drawing",          "value": "drawing",        "label_en": "Drawing",       "label_cn": "素描",     "priority": 7 },
+      { "id": "artwork_printmaking",      "value": "printmaking",    "label_en": "Printmaking",   "label_cn": "版画",     "priority": 8 },
+      { "id": "artwork_painting",         "value": "painting",       "label_en": "Painting",      "label_cn": "绘画",     "priority": 9 },
+      { "id": "artwork_other",            "value": "other",          "label_en": "Other",         "label_cn": "其他",     "priority": 10 }
+    ],
+    "image": [
+      { "id": "image_artist_portrait", "value": "artist_portrait", "label": "艺术家肖像 / Artist Portrait" },
+      { "id": "image_photography",     "value": "photography",     "label": "摄影作品 / Photography" },
+      { "id": "image_artwork_image",   "value": "artwork_image",   "label": "作品图片 / Artwork Image" },
+      { "id": "image_artwork_detail",  "value": "artwork_detail",  "label": "作品局部图片 / Artwork Detail Image" },
+      { "id": "image_exhibition_view", "value": "exhibition_view", "label": "展览现场 / Exhibition View" },
+      { "id": "image_poster",          "value": "poster",          "label": "海报图片 / Poster Image" },
+      { "id": "image_sketch",          "value": "sketch",          "label": "草图 / Sketch" },
+      { "id": "image_performance",     "value": "performance",     "label": "表演现场 / Performance" },
+      { "id": "image_concept",         "value": "concept",         "label": "概念图 / Concept" }
+    ],
+    "video": [
+      { "id": "video_documentary",   "value": "documentary",   "label": "纪录片 / Documentary" },
+      { "id": "video_short_film",    "value": "short_film",    "label": "短片 / Short Film" },
+      { "id": "video_feature_film",  "value": "feature_film",  "label": "故事片 / Feature Film" },
+      { "id": "video_animation",     "value": "animation",     "label": "动画 / Animation" },
+      { "id": "video_experimental",  "value": "experimental",  "label": "实验 / Experimental" },
+      { "id": "video_performance",   "value": "performance",   "label": "表演 / Performance" },
+      { "id": "video_installation",  "value": "installation",  "label": "装置 / Installation" },
+      { "id": "video_other",         "value": "other",         "label": "其他 / Other" }
+    ],
+    "event": [
+      { "id": "event_group_exhibition",  "value": "group_exhibition",  "label_en": "Group Exhibition", "label_cn": "群展" },
+      { "id": "event_solo_exhibition",   "value": "solo_exhibition",   "label_en": "Solo Exhibition",  "label_cn": "个展" },
+      { "id": "event_project",           "value": "project",           "label_en": "Project",          "label_cn": "项目" },
+      { "id": "event_performance",       "value": "performance",       "label_en": "Performance",      "label_cn": "表演" },
+      { "id": "event_award",             "value": "award",             "label_en": "Award",            "label_cn": "获奖" },
+      { "id": "event_artist_talk",       "value": "artist_talk",       "label_en": "Artist Talk",      "label_cn": "艺术家讲座" },
+      { "id": "event_screening",         "value": "screening",         "label_en": "Screening",        "label_cn": "放映" },
+      { "id": "event_workshop",          "value": "workshop",          "label_en": "Workshop",         "label_cn": "工作坊" },
+      { "id": "event_artist_residency",  "value": "artist_residency",  "label_en": "Artist Residency", "label_cn": "驻地" }
+    ],
+    "about": [
+      { "id": "about_biography",            "value": "biography",            "label_en": "Artist Biography",   "label_cn": "艺术家简介" },
+      { "id": "about_statement",            "value": "statement",            "label_en": "Artist Statement",   "label_cn": "艺术家陈述" },
+      { "id": "about_cv",                   "value": "cv",                   "label_en": "CV/Resume",          "label_cn": "简历" },
+      { "id": "about_exhibition_history",   "value": "exhibition_history",   "label_en": "Exhibition History", "label_cn": "展览经历" },
+      { "id": "about_awards",               "value": "awards",               "label_en": "Awards & Recognition","label_cn": "奖项与认可" },
+      { "id": "about_publications",         "value": "publications",         "label_en": "Publications",       "label_cn": "出版物" },
+      { "id": "about_collections",          "value": "collections",          "label_en": "Collections",        "label_cn": "收藏" },
+      { "id": "about_education",            "value": "education",            "label_en": "Education",          "label_cn": "教育背景" },
+      { "id": "about_other",                "value": "other",                "label_en": "Other",              "label_cn": "其他" }
+    ],
+    "mark": [
+      { "id": "mark_slider",  "value": "slider",  "label": "轮播 / Slider" },
+      { "id": "mark_private", "value": "private", "label": "私密 / Private" }
+    ],
+    "web": [
+      { "id": "web_portfolio", "value": "portfolio", "label_en": "Portfolio",    "label_cn": "作品集" },
+      { "id": "web_gallery",   "value": "gallery",   "label_en": "Gallery",      "label_cn": "画廊" },
+      { "id": "web_exhibition","value": "exhibition","label_en": "Exhibition",   "label_cn": "展览" },
+      { "id": "web_social",    "value": "social",    "label_en": "Social Media", "label_cn": "社交媒体" },
+      { "id": "web_news",      "value": "news",      "label_en": "News",         "label_cn": "新闻" },
+      { "id": "web_other",     "value": "other",     "label_en": "Other",        "label_cn": "其他" }
+    ],
+    "language": [
+      { "id": "lang_en", "value": "EN", "label_en": "English", "label_cn": "英文" },
+      { "id": "lang_cn", "value": "CN", "label_en": "Chinese", "label_cn": "中文" }
+    ],
+    "writing": [
+      { "id": "writing_essay",      "value": "essay",      "label_en": "Essay",      "label_cn": "散文" },
+      { "id": "writing_article",    "value": "article",    "label_en": "Article",    "label_cn": "文章" },
+      { "id": "writing_review",     "value": "review",     "label_en": "Review",     "label_cn": "评论" },
+      { "id": "writing_interview",  "value": "interview",  "label_en": "Interview",  "label_cn": "访谈" },
+      { "id": "writing_criticism",  "value": "criticism",  "label_en": "Criticism",  "label_cn": "评论" },
+      { "id": "writing_other",      "value": "other",      "label_en": "Other",      "label_cn": "其他" }
+    ]
+  }

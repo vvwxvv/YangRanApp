@@ -1,0 +1,894 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+ 
+/* ── Fonts ─────────────────────────────────────────────────────────────────── */
+ 
+/* ===== Avenir Next ===== */
+@font-face {
+  font-family: 'AvenirNext-Medium';
+  src: url('/fonts/AvenirNext/AvenirNextMedium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'AvenirNext-Regular';
+  src: url('/fonts/AvenirNext/AvenirNextRegular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ===== Big Caslon ===== */
+@font-face {
+  font-family: 'BigCaslon-Medium';
+  src: url('/fonts/BigCaslon/Big-Caslon-Medium.ttf') format('truetype');
+  font-weight: 500;  /* Medium */
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ===== Iowan Old Style ===== */
+@font-face {
+  font-family: 'IowanOldStyle-Black';
+  src: url('/fonts/IowanOldStyle/IowanOldStyleBT-Black.otf') format('opentype');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'IowanOldStyle-BlackItalic';
+  src: url('/fonts/IowanOldStyle/IowanOldStyleBT-BlackItalic.otf') format('opentype');
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'IowanOldStyle-Bold';
+  src: url('/fonts/IowanOldStyle/IowanOldStyleBT-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'IowanOldStyle-BoldItalic';
+  src: url('/fonts/IowanOldStyle/IowanOldStyleBT-BoldItalic.otf') format('opentype');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'IowanOldStyle-Italic';
+  src: url('/fonts/IowanOldStyle/IowanOldStyleBT-Italic.otf') format('opentype');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'IowanOldStyle-Roman';
+  src: url('/fonts/IowanOldStyle/IowanOldStyleBT-Roman.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ===== Palatino ===== */
+@font-face {
+  font-family: 'Palatino';
+  src: url('/fonts/Palatino/Palatino.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ===== PingFang ===== */
+@font-face {
+  font-family: 'PingFang-Thin';
+  src: url('/fonts/PingFang/PingFangThin.ttf') format('truetype');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'PingFang-Light';
+  src: url('/fonts/PingFang/PingFangLight.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'PingFang-Regular';
+  src: url('/fonts/PingFang/PingFangRegular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Jost-Medium';
+  src: url('/fonts/Jost/Jost-Medium.ttf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ── Light theme (default) ──────────────────────────────────────────────────── */
+ 
+:root,
+.light {
+  --background-primary:          rgb(255, 255, 255);
+  --background-secondary:        #ffffff;
+  --background-tertiary:         #ffffff;
+  --text-primary:                #000000;
+  --text-secondary:              #000000;
+  --text-accent:                 #374151;
+  --border-light:                #000000;
+  --border-medium:               #000000;
+  --border-dark:                 #000000;
+  --border-dashed:               #d1d5db;
+  --interactive-border:          #d1d5db;
+  --interactive-border-hover:    #000000;
+  --interactive-background-hover:#f9fafb;
+  --background-overlay:          rgba(255, 255, 255, 0.3);
+  --shadow-medium:               0 6px 20px rgba(0, 0, 0, 0.08);
+  --font-family:                 inherit;
+}
+ 
+/* ── Dark theme ─────────────────────────────────────────────────────────────── */
+ 
+.dark {
+  --background-primary:          #000000;
+  --background-secondary:        #1a1a1a;
+  --background-tertiary:         #2a2a2a;
+  --text-primary:                #ffffff;
+  --text-secondary:              #9ca3af;
+  --text-accent:                 #d1d5db;
+  --border-light:                #374151;
+  --border-medium:               #4b5563;
+  --border-dark:                 #ffffff;
+  --border-dashed:               #4b5563;
+  --interactive-border:          #4b5563;
+  --interactive-border-hover:    #9ca3af;
+  --interactive-background-hover:#1a1a1a;
+  --background-overlay:          rgba(0, 0, 0, 0.3);
+  --shadow-medium:               0 6px 20px rgba(0, 0, 0, 0.3);
+  --font-family:                 inherit;
+}
+ 
+/* ── Tailwind base reset overrides ─────────────────────────────────────────── */
+ 
+
+ 
+/* Ensure day mode has proper black text in all containers */
+[data-theme="light"] .text-black,
+[data-theme="light"] .text-black *,
+.light .text-black,
+.light .text-black * {
+  color: #000000 !important;
+}
+
+/* Night mode - ensure white text in boxes/containers */
+[data-theme="dark"] .text-white,
+.dark .text-white {
+  color: #ffffff !important;
+}
+
+[data-theme="dark"] .text-white *,
+.dark .text-white * {
+  color: #ffffff !important;
+}
+
+/* Dark theme variables */
+[data-theme="dark"] {
+  --background-primary: #000000;
+  --background-secondary: #1a1a1a;
+  --background-tertiary: #2a2a2a;
+  --text-primary: #ffffff;
+  --text-secondary: #9ca3af;
+  --text-accent: #d1d5db;
+  --border-light: #374151;
+  --border-medium: #4b5563;
+  --border-dark: #ffffff;
+  --border-dashed: #4b5563;
+  --interactive-border: #4b5563;
+  --interactive-border-hover: #9ca3af;
+  --interactive-background-hover: #1a1a1a;
+  --background-overlay: rgba(0, 0, 0, 0.3);
+  --shadow-medium: 0 6px 20px rgba(0,0,0,0.3);
+}
+
+/* Dark theme Material-UI overrides */
+[data-theme="dark"] .MuiFormControl-root .MuiOutlinedInput-root,
+[data-theme="dark"] .MuiSelect-select,
+[data-theme="dark"] .MuiFormControl-root,
+[data-theme="dark"] .MuiFormControl-root .MuiInputBase-root,
+[data-theme="dark"] .MuiPopover-root .MuiPaper-root,
+[data-theme="dark"] .MuiFormControl-root .MuiOutlinedInput-root.Mui-focused,
+[data-theme="dark"] .MuiFormControl-root .MuiOutlinedInput-root.Mui-focused .MuiInputBase-input,
+[data-theme="dark"] .MuiInputBase-root,
+[data-theme="dark"] .MuiInputBase-root.Mui-focused,
+[data-theme="dark"] .MuiInputBase-root.Mui-focused .MuiInputBase-input,
+[data-theme="dark"] .MuiSelect-root,
+[data-theme="dark"] .MuiSelect-root.Mui-focused,
+[data-theme="dark"] .MuiSelect-root.Mui-focused .MuiSelect-select {
+  background-color: var(--background-primary, #000000) !important;
+}
+
+/* Class-based dark mode support */
+.dark {
+  --background-primary: #000000;
+  --background-secondary: #1a1a1a;
+  --background-tertiary: #2a2a2a;
+  --text-primary: #ffffff;
+  --text-secondary: #9ca3af;
+  --text-accent: #d1d5db;
+  --border-light: #374151;
+  --border-medium: #4b5563;
+  --border-dark: #ffffff;
+  --border-dashed: #4b5563;
+  --interactive-border: #4b5563;
+  --interactive-border-hover: #9ca3af;
+  --interactive-background-hover: #1a1a1a;
+  --background-overlay: rgba(0, 0, 0, 0.3);
+  --shadow-medium: 0 6px 20px rgba(0,0,0,0.3);
+}
+
+/* Dark theme thin white borders - make white borders thinner in night mode */
+[data-theme="dark"] .border-white,
+.dark .border-white {
+  border-width: 1px !important;
+}
+
+[data-theme="dark"] .border-2,
+.dark .border-2 {
+  border-width: 1px !important;
+}
+
+/* Dark theme reduced white padding - make padding smaller in night mode */
+[data-theme="dark"] .p-6,
+.dark .p-6 {
+  padding: 0.75rem !important; /* Reduce from 1.5rem to 0.75rem */
+}
+
+[data-theme="dark"] .p-8,
+.dark .p-8 {
+  padding: 1rem !important; /* Reduce from 2rem to 1rem */
+}
+
+[data-theme="dark"] .p-5,
+.dark .p-5 {
+  padding: 0.625rem !important; /* Reduce from 1.25rem to 0.625rem */
+}
+
+/* Dark theme reduced gaps */
+[data-theme="dark"] .gap-6,
+.dark .gap-6 {
+  gap: 1rem !important; /* Reduce from 1.5rem to 1rem */
+}
+
+/* Dark theme reduced margins */
+[data-theme="dark"] .mb-6,
+.dark .mb-6 {
+  margin-bottom: 1rem !important; /* Reduce from 1.5rem to 1rem */
+}
+
+[data-theme="dark"] .mt-6,
+.dark .mt-6 {
+  margin-top: 1rem !important; /* Reduce from 1.5rem to 1rem */
+}
+
+/* Specific overrides for common thick white border patterns in night mode */
+[data-theme="dark"] .border-2.border-black.dark\:border-white,
+.dark .border-2.border-black.dark\:border-white {
+  border-width: 1px !important;
+}
+
+[data-theme="dark"] .border-2.border-black,
+.dark .border-2.border-black {
+  border-width: 1px !important;
+}
+
+/* Override any border-2 classes in dark mode to be thinner */
+[data-theme="dark"] [class*="border-2"],
+.dark [class*="border-2"] {
+  border-width: 1px !important;
+}
+
+/* Make white borders more subtle in dark mode */
+[data-theme="dark"] .border-white,
+.dark .border-white {
+  border-color: rgba(255, 255, 255, 0.7) !important; /* Make white borders slightly transparent */
+}
+
+/* Reduce white padding in dark mode for better visual balance */
+[data-theme="dark"] .px-6,
+.dark .px-6 {
+  padding-left: 0.75rem !important;
+  padding-right: 0.75rem !important;
+}
+
+[data-theme="dark"] .py-6,
+.dark .py-6 {
+  padding-top: 0.75rem !important;
+  padding-bottom: 0.75rem !important;
+}
+
+[data-theme="dark"] .px-8,
+.dark .px-8 {
+  padding-left: 1rem !important;
+  padding-right: 1rem !important;
+}
+
+[data-theme="dark"] .py-8,
+.dark .py-8 {
+  padding-top: 1rem !important;
+  padding-bottom: 1rem !important;
+}
+
+/* Form label styles - align left with border */
+.form-label {
+  display: block;
+  margin-bottom: 8px;
+  text-align: left;
+  position: relative;
+  padding-left: 12px;
+}
+
+.form-label::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 3px;
+  height: 16px;
+  background-color: var(--border-medium, #4b5563);
+  border-radius: 2px;
+}
+
+/* Dark theme form label border */
+[data-theme="dark"] .form-label::before,
+.dark .form-label::before {
+  background-color: var(--border-light, #374151);
+}
+
+/* Ensure all form labels use these styles */
+label[for],
+.form-section label,
+.ant-form-item-label > label,
+.MuiFormControl-root label,
+.MuiInputLabel-root {
+  display: block !important;
+  margin-bottom: 8px !important;
+  text-align: left !important;
+  position: relative !important;
+  padding-left: 12px !important;
+}
+
+label[for]::before,
+.form-section label::before,
+.ant-form-item-label > label::before,
+.MuiFormControl-root label::before,
+.MuiInputLabel-root::before {
+  content: '' !important;
+  position: absolute !important;
+  left: 0 !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  width: 3px !important;
+  height: 16px !important;
+  background-color: var(--border-medium, #4b5563) !important;
+  border-radius: 2px !important;
+}
+
+/* Dark theme overrides for all label types */
+[data-theme="dark"] label[for]::before,
+[data-theme="dark"] .form-section label::before,
+[data-theme="dark"] .ant-form-item-label > label::before,
+[data-theme="dark"] .MuiFormControl-root label::before,
+[data-theme="dark"] .MuiInputLabel-root::before,
+.dark label[for]::before,
+.dark .form-section label::before,
+.dark .ant-form-item-label > label::before,
+.dark .MuiFormControl-root label::before,
+.dark .MuiInputLabel-root::before {
+  background-color: var(--border-light, #374151) !important;
+}
+
+body {
+  background-color: var(--background-primary);
+  color: var(--text-primary);
+  /* Base font stack: Latin → Avenir Next, CJK → PingFang, then system fallbacks.
+     Must match the @font-face names above. Components that need a specific
+     language font override this via useFont(). Base size lives here — the
+     typography lib resolves families only. */
+  font-family: 'AvenirNext-Regular', 'PingFang-Regular', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  font-size: 15px;
+  line-height: 24px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  scrollbar-gutter: stable;
+}
+
+body::-webkit-scrollbar {
+  width: 8px;
+}
+
+body::-webkit-scrollbar-track {
+  background-color: var(--background-secondary);
+  border-radius: 0px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--border-medium);
+  margin: 0;
+}
+
+.imageContainer {
+  width: 800px;
+  height: 400px;
+  overflow: hidden;
+}
+
+/* Material-UI Component Theme Integration */
+.MuiFormControl-root .MuiInputLabel-root {
+  color: var(--text-primary, #000000) !important;
+}
+
+.MuiFormControl-root .MuiOutlinedInput-root {
+  background-color: var(--background-primary, #ffffff) !important;
+  color: var(--text-primary, #000000) !important;
+}
+
+.MuiFormControl-root .MuiOutlinedInput-root fieldset {
+  border-color: var(--border-light, #e5e7eb) !important;
+}
+
+.MuiFormControl-root .MuiOutlinedInput-root:hover fieldset {
+  border-color: var(--text-primary, #000000) !important;
+}
+
+.MuiFormControl-root .MuiOutlinedInput-root.Mui-focused fieldset {
+  border-color: var(--text-primary, #000000) !important;
+}
+
+/* Ensure Select components maintain background color */
+.MuiSelect-select {
+  color: var(--text-primary, #000000) !important;
+  background-color: var(--background-primary, #ffffff) !important;
+}
+
+.MuiSelect-select:focus {
+  background-color: var(--background-primary, #ffffff) !important;
+}
+
+/* Ensure Menu components maintain background color */
+.MuiMenu-paper {
+  background-color: var(--background-primary, #ffffff) !important;
+  color: var(--text-primary, #000000) !important;
+  border: 1px solid var(--border-light, #e5e7eb) !important;
+}
+
+.MuiMenuItem-root {
+  background-color: var(--background-primary, #ffffff) !important;
+  color: var(--text-primary, #000000) !important;
+}
+
+.MuiMenuItem-root:hover {
+  background-color: var(--interactive-background-hover, rgba(0, 0, 0, 0.1)) !important;
+}
+
+.MuiMenuItem-root.Mui-selected {
+  background-color: var(--interactive-background-hover, rgba(0, 0, 0, 0.1)) !important;
+}
+
+/* Ensure FormControl maintains background color */
+.MuiFormControl-root {
+  background-color: var(--background-primary, #ffffff) !important;
+}
+
+.MuiFormControl-root .MuiInputBase-root {
+  background-color: var(--background-primary, #ffffff) !important;
+}
+
+/* Ensure Select dropdown maintains background color */
+.MuiPopover-root .MuiPaper-root {
+  background-color: var(--background-primary, #ffffff) !important;
+}
+
+/* Ensure focused states maintain background color */
+.MuiFormControl-root .MuiOutlinedInput-root.Mui-focused {
+  background-color: var(--background-primary, #ffffff) !important;
+}
+
+.MuiFormControl-root .MuiOutlinedInput-root.Mui-focused .MuiInputBase-input {
+  background-color: var(--background-primary, #ffffff) !important;
+}
+
+/* Ensure all form elements maintain background color */
+.MuiInputBase-root,
+.MuiInputBase-root.Mui-focused,
+.MuiInputBase-root.Mui-focused .MuiInputBase-input,
+.MuiSelect-root,
+.MuiSelect-root.Mui-focused,
+.MuiSelect-root.Mui-focused .MuiSelect-select {
+  background-color: var(--background-primary, #ffffff) !important;
+}
+
+.MuiTooltip-tooltip {
+  background-color: var(--background-primary, #ffffff) !important;
+  color: var(--text-primary, #000000) !important;
+  border: 1px solid var(--border-light, #e5e7eb) !important;
+}
+
+.imageWrapper {
+  width: 100%;
+  max-width: 100%;
+}
+
+.imageWrapper img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+/* Simple theme utility classes */
+.text-theme-primary {
+  color: var(--text-primary);
+}
+
+.text-theme-secondary {
+  color: var(--text-secondary);
+}
+
+.bg-theme-primary {
+  background-color: var(--background-primary);
+}
+
+.bg-theme-secondary {
+  background-color: var(--background-secondary);
+}
+
+.border-theme {
+  border-color: var(--border-light);
+}
+
+/* Ensure all text elements use theme colors */
+h1, h2, h3, h4, h5, h6, p, span, div, label, input, textarea, select, button {
+  color: var(--text-primary);
+}
+
+/* Ensure all backgrounds use theme colors */
+div, section, article, aside, header, footer, nav, main {
+  background-color: var(--background-primary);
+}
+
+/* Material-UI backdrop override */
+.MuiBackdrop-root {
+  background-color: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(4px);
+}
+
+/* Material-UI Menu and Select overrides */
+.MuiMenu-root .MuiPaper-root {
+  background-color: var(--background-primary) !important;
+  color: var(--text-primary) !important;
+}
+
+.MuiSelect-select {
+  background-color: var(--background-primary) !important;
+  color: var(--text-primary) !important;
+}
+
+/* Simple drawer and header styles */
+.drawer-bg {
+  background-color: var(--background-primary);
+  opacity: 0.95;
+  backdrop-filter: blur(4px);
+}
+
+/* Custom thin black scrollbar utility */
+.scrollbar-thin-black {
+  scrollbar-width: thin; /* Firefox */
+  scrollbar-color: #000000 transparent; /* Firefox */
+}
+
+.scrollbar-thin-black::-webkit-scrollbar {
+  width: 3px;
+  height: 3px;
+}
+
+.scrollbar-thin-black::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.scrollbar-thin-black::-webkit-scrollbar-thumb {
+  background-color: #000000;
+}
+
+.header-bg {
+  background-color: var(--background-primary);
+  opacity: 0.95;
+  backdrop-filter: blur(4px);
+}
+
+/* Bottom bar styles */
+.bottom-bar {
+  background-color: var(--background-primary);
+  opacity: 0.95;
+  backdrop-filter: blur(4px);
+  border-top: 1px solid var(--border-light);
+}
+
+/* Theme transition styles */
+* {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Ensure proper contrast in both themes */
+.text-black {
+  color: var(--text-primary) !important;
+}
+
+.text-white {
+  color: var(--text-primary) !important;
+}
+
+.bg-white {
+  background-color: var(--background-primary) !important;
+}
+
+.bg-black {
+  background-color: var(--background-primary) !important;
+}
+
+/* Loading animation override to prevent theme background interference */
+.loading-animation-override {
+  background: transparent !important;
+}
+
+/* Dark drawer override for TitleTextNavSimpleStyle */
+.dark-drawer .ant-drawer-content {
+  background-color: #000000 !important;
+  background: #000000 !important;
+}
+
+.dark-drawer .ant-drawer-content-wrapper {
+  background-color: #000000 !important;
+  background: #000000 !important;
+}
+
+.dark-drawer .ant-drawer-body {
+  background-color: #000000 !important;
+  background: #000000 !important;
+}
+
+.dark-drawer .ant-drawer-header {
+  background-color: #000000 !important;
+  background: #000000 !important;
+}
+
+/* More aggressive overrides */
+.dark-drawer .ant-drawer-content,
+.dark-drawer .ant-drawer-content-wrapper,
+.dark-drawer .ant-drawer-body,
+.dark-drawer .ant-drawer-header,
+.dark-drawer .ant-drawer-mask {
+  background-color: #000000 !important;
+  background: #000000 !important;
+}
+
+/* Override any Ant Design default backgrounds */
+.dark-drawer * {
+  background-color: transparent !important;
+}
+
+.dark-drawer .ant-drawer-content,
+.dark-drawer .ant-drawer-content-wrapper,
+.dark-drawer .ant-drawer-body {
+  background-color: #000000 !important;
+  background: #000000 !important;
+}
+
+/* Force black background on all drawer elements */
+.dark-drawer .ant-drawer-content,
+.dark-drawer .ant-drawer-content-wrapper,
+.dark-drawer .ant-drawer-body,
+.dark-drawer .ant-drawer-header,
+.dark-drawer .ant-drawer-mask {
+  background-color: #000000 !important;
+  background: #000000 !important;
+}
+
+/* Ensure proper text contrast in both themes for common component patterns */
+/* Day mode - white backgrounds with black text */
+.bg-white {
+  color: #000000 !important;
+}
+
+.bg-white * {
+  color: #000000 !important;
+}
+
+/* Night mode - black backgrounds with white text */
+[data-theme="dark"] .bg-black,
+.dark .bg-black {
+  color: #ffffff !important;
+}
+
+[data-theme="dark"] .bg-black *,
+.dark .bg-black * {
+  color: #ffffff !important;
+}
+
+/* Override any conflicting text colors */
+[data-theme="light"] .text-white,
+.light .text-white {
+  color: #000000 !important; /* Force black text in light mode even if text-white class is used */
+}
+
+[data-theme="dark"] .text-black,
+.dark .text-black {
+  color: #ffffff !important; /* Force white text in dark mode even if text-black class is used */
+}
+
+/* Ensure form inputs and buttons have proper text contrast */
+[data-theme="light"] input,
+[data-theme="light"] textarea,
+[data-theme="light"] select,
+[data-theme="light"] button,
+.light input,
+.light textarea,
+.light select,
+.light button {
+  color: #000000 !important;
+}
+
+[data-theme="dark"] input,
+[data-theme="dark"] textarea,
+[data-theme="dark"] select,
+[data-theme="dark"] button,
+.dark input,
+.dark textarea,
+.dark select,
+.dark button {
+  color: #ffffff !important;
+}
+
+
+/* Custom tooltip styles for Radix UI - remove white backgrounds */
+.custom-image-tooltip {
+  background-color: rgba(0, 0, 0, 0.9) !important;
+  color: white !important;
+  border: none !important;
+  border-radius: 6px !important;
+  padding: 8px 12px !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3) !important;
+  font-size: 12px !important;
+  max-width: 300px !important;
+  z-index: 9999 !important;
+  position: relative !important;
+  display: block !important;
+}
+
+.tooltip-arrow {
+  fill: rgba(0, 0, 0, 0.9) !important;
+}
+
+/* Debug styles to make tooltip visible */
+.custom-image-tooltip {
+  border: 2px solid red !important;
+  background-color: red !important;
+  color: white !important;
+}
+
+/* Radix UI tooltip animations */
+.custom-image-tooltip[data-state='delayed-open'][data-side='top'] {
+  animation-name: slideDownAndFade !important;
+}
+
+.custom-image-tooltip[data-state='delayed-open'][data-side='right'] {
+  animation-name: slideLeftAndFade !important;
+}
+
+.custom-image-tooltip[data-state='delayed-open'][data-side='bottom'] {
+  animation-name: slideUpAndFade !important;
+}
+
+.custom-image-tooltip[data-state='delayed-open'][data-side='left'] {
+  animation-name: slideRightAndFade !important;
+}
+
+@keyframes slideUpAndFade {
+  from {
+    opacity: 0;
+    transform: translateY(2px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideRightAndFade {
+  from {
+    opacity: 0;
+    transform: translateX(-2px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideDownAndFade {
+  from {
+    opacity: 0;
+    transform: translateY(-2px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideLeftAndFade {
+  from {
+    opacity: 0;
+    transform: translateX(2px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Logo transparency fixes */
+.logo-container {
+  background: transparent !important;
+  background-color: transparent !important;
+}
+
+.logo-container img {
+  background: transparent !important;
+  background-color: transparent !important;
+}
+/* ─────────────────────────────────────────────────────────────────────────
+   Home — horizontal scroller (Bauhaus-style custom scrollbar)
+   The native OS scrollbar is replaced with a flat BLACK, square-cornered
+   track/thumb (no rounding), so it reads as a hard geometric rule.
+   ───────────────────────────────────────────────────────────────────────── */
+.hj-scroller {
+  scrollbar-width: thin;               /* Firefox */
+  scrollbar-color: #000 transparent;
+}
+.hj-scroller::-webkit-scrollbar {
+  height: 8px;
+  background: transparent;
+}
+.hj-scroller::-webkit-scrollbar-track {
+  background: transparent;
+  border-top: 1px solid rgba(0, 0, 0, 0.14);
+}
+.hj-scroller::-webkit-scrollbar-thumb {
+  background: #000;
+  border-radius: 0;
+}
+/* Dark theme: invert so the bar stays visible on a black page (white thumb). */
+.dark .hj-scroller {
+  scrollbar-color: #fff transparent;
+}
+.dark .hj-scroller::-webkit-scrollbar-track {
+  border-top: 1px solid rgba(255, 255, 255, 0.28);
+}
+.dark .hj-scroller::-webkit-scrollbar-thumb {
+  background: #fff;
+}

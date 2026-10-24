@@ -1,0 +1,87 @@
+{
+    "mainMenu": {
+      "en": [
+        { "label": "Artwork", "href": "/artworks" },
+        { "label": "Exhibitions", "href": "/exhibitions" },
+        { "label": "News", "href": "/news" },
+        { "label": "CV", "href": "/resume" },
+        { "label": "About", "href": "/about" }
+      ],
+      "cn": [
+        { "label": "作品", "href": "/artworks" },
+        { "label": "展览", "href": "/exhibitions" },
+        { "label": "新闻", "href": "/news" },
+        { "label": "简历", "href": "/resume" },
+        { "label": "关于", "href": "/about" }
+      ]
+    },
+    "managerMenu": {
+      "en": [
+        { "label": "About", "href": "/manager/about" },
+        {
+          "label": "Content",
+          "href": "/manager/artwork",
+          "dropdown": [
+            { "label": "Artwork", "href": "/manager/artwork" },
+            { "label": "Exhibition", "href": "/manager/exhibition" },
+            { "label": "Event", "href": "/manager/event" },
+            { "label": "Writing", "href": "/manager/writing" },
+            { "label": "Bibliography", "href": "/manager/bibliography" },
+            { "label": "Series", "href": "/manager/series" },
+            { "label": "Resume", "href": "/manager/resume" }
+          ]
+        },
+        {
+          "label": "Media",
+          "href": "/manager/image",
+          "dropdown": [
+            { "label": "Image", "href": "/manager/image" },
+            { "label": "Video", "href": "/manager/video" },
+            { "label": "Web", "href": "/manager/web" }
+          ]
+        },
+        {
+          "label": "Enquiries",
+          "href": "/manager/enquire",
+          "dropdown": [
+            { "label": "Enquiries", "href": "/manager/enquire" }
+          ]
+        },
+        { "label": "Artist Contact", "href": "/manager/artist-contact" }
+      ],
+      "cn": [
+        { "label": "关于", "href": "/manager/about" },
+        {
+          "label": "内容",
+          "href": "/manager/artwork",
+          "dropdown": [
+            { "label": "作品", "href": "/manager/artwork" },
+            { "label": "展览", "href": "/manager/exhibition" },
+            { "label": "活动", "href": "/manager/event" },
+            { "label": "写作", "href": "/manager/writing" },
+            { "label": "文献", "href": "/manager/bibliography" },
+            { "label": "系列", "href": "/manager/series" },
+            { "label": "履历", "href": "/manager/resume" }
+          ]
+        },
+        {
+          "label": "媒体",
+          "href": "/manager/image",
+          "dropdown": [
+            { "label": "图库", "href": "/manager/image" },
+            { "label": "悬停图", "href": "/manager/image/hover" },
+            { "label": "视频", "href": "/manager/video" },
+            { "label": "网页", "href": "/manager/web" }
+          ]
+        },
+        {
+          "label": "咨询",
+          "href": "/manager/enquire",
+          "dropdown": [
+            { "label": "咨询", "href": "/manager/enquire" }
+          ]
+        },
+        { "label": "联系艺术家", "href": "/manager/artist-contact" }
+      ]
+    }
+  }

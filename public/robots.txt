@@ -1,0 +1,4 @@
+# https://www.robotstxt.org/robotstxt.htmlUser-agent: *
+Disallow: /_next/static/
+Disallow: /auth/
+Disallow: /_next/data/

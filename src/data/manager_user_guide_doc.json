@@ -1,0 +1,772 @@
+{
+  "title": {
+    "en": "Manager User Guide",
+    "cn": "后台使用指南"
+  },
+  "subtitle": {
+    "en": "Eight chapters, all interface. What to type is up to you.",
+    "cn": "八节，全是操作。填什么你自己定。"
+  },
+  "badge": {
+    "en": "Guide",
+    "cn": "指南"
+  },
+  "searchPlaceholder": {
+    "en": "Search chapters or keywords…",
+    "cn": "搜章节或关键词…"
+  },
+  "noResults": {
+    "en": "Nothing matches that.",
+    "cn": "没有匹配的章节。"
+  },
+  "backLabel": {
+    "en": "Contents",
+    "cn": "目录"
+  },
+  "updated": "2026-10-24",
+  "parts": [],
+  "sections": [
+    {
+      "id": "start",
+      "group": "all",
+      "icon": "book",
+      "title": {
+        "en": "Getting around",
+        "cn": "进入与页面"
+      },
+      "summary": {
+        "en": "Login, menus, list pages, delete.",
+        "cn": "登录、菜单、列表页、删除。"
+      },
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": {
+            "en": "The manager is at /manager. Pattern lock, then you're on the artwork list. Menu top-left, language top-right, Guide on the right edge.",
+            "cn": "后台在 /manager。过了图案锁直接进作品列表。菜单在左上，语言切换在右上，指南在右侧。"
+          }
+        },
+        {
+          "type": "list",
+          "items": [
+            {
+              "en": "Every collection page has the same layout: title and Cards/List on top, search and buttons on the next row, grouping and filters below that, records at the bottom.",
+              "cn": "所有内容页长得一样：最上面是标题和卡片/列表切换，第二行搜索和按钮，再下面分组和筛选，最后是记录。"
+            },
+            {
+              "en": "Click a card title to edit. Delete is at the bottom of the card and asks first.",
+              "cn": "点卡片标题进编辑。删除在卡片底部，会先确认。"
+            },
+            {
+              "en": "Search covers that page's main fields. Grouping and filters vary; use clear filters to get everything back.",
+              "cn": "搜索只查当前页的主要字段。分组和筛选因页而异，用“清除筛选”回到全部。"
+            },
+            {
+              "en": "List view is tighter. Click a row to expand every field.",
+              "cn": "列表视图更紧凑，点一行展开全部字段。"
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "src": "/guide/manager-list-buttons.png",
+          "alt": {
+            "en": "Top of a list page: New, Batch edit, Export CSV, Order page. Cards/List sits above.",
+            "cn": "列表页右上：新建、批量编辑、导出 CSV、排序页。上方是卡片/列表切换。"
+          },
+          "caption": {
+            "en": "Top of a list page: New, Batch edit, Export CSV, Order page. Cards/List sits above.",
+            "cn": "列表页右上：新建、批量编辑、导出 CSV、排序页。上方是卡片/列表切换。"
+          },
+          "maxWidth": 620
+        },
+        {
+          "type": "note",
+          "tone": "warning",
+          "text": {
+            "en": "Submit before you leave. There is no undo.",
+            "cn": "改完点提交。没保存就退出，改动会丢。没有撤销。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "editing",
+      "group": "all",
+      "icon": "edit",
+      "title": {
+        "en": "Creating & editing",
+        "cn": "新建与编辑"
+      },
+      "summary": {
+        "en": "Form layout, tabs, arrays, relations, save.",
+        "cn": "表单结构、标签、段落、关联、保存。"
+      },
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": {
+            "en": "Every form is built the same way: language and Form settings at the top, tabs in the middle, submit at the bottom.",
+            "cn": "每张表单结构一样：顶部语言和表单设置，中间标签，底部提交。"
+          }
+        },
+        {
+          "type": "image",
+          "src": "/guide/manager-form-topright.png",
+          "alt": {
+            "en": "Top right of a form: language dropdown and Form settings.",
+            "cn": "表单右上：语言下拉和“表单设置”。"
+          },
+          "caption": {
+            "en": "Top right of a form: language dropdown and Form settings.",
+            "cn": "表单右上：语言下拉和“表单设置”。"
+          },
+          "maxWidth": 360
+        },
+        {
+          "type": "steps",
+          "items": [
+            {
+              "en": "New at the top right opens an empty form. Clicking an existing record's title opens it for editing.",
+              "cn": "右上“新建”开一张空表单；点已有记录的标题就是编辑。"
+            },
+            {
+              "en": "The language dropdown is at the top. A new record follows the interface language; you can change it.",
+              "cn": "语言下拉在表单顶部。新建时默认跟界面语言，可以改。"
+            },
+            {
+              "en": "Switch tabs to move between field groups. With long forms it beats scrolling.",
+              "cn": "用标签切换字段分组。表单长的时候比滚动好找。"
+            },
+            {
+              "en": "Paragraph fields: Add appends a row, the end of the row removes it. Relation fields: open the dropdown, search or click a row to select, click again to deselect; selected values become removable chips.",
+              "cn": "段落字段：点“添加”加一行，行尾删除。关联字段：点开下拉，搜索或直接点选项，再点一次取消；选中的会变成可移除的标签。"
+            },
+            {
+              "en": "The Ordering tab is read-only. Edit ordering takes you to the order page.",
+              "cn": "排序标签只读，点“编辑排序”去排序页。"
+            },
+            {
+              "en": "Submit at the bottom. Missing required fields turn red; fix them and submit again.",
+              "cn": "点底部提交。必填项没填会标红，补完再提交。"
+            }
+          ]
+        },
+        {
+          "type": "note",
+          "tone": "info",
+          "text": {
+            "en": "Editing an old record keeps its stored language.",
+            "cn": "编辑旧记录时，语言保持记录原来的值。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "form-settings",
+      "group": "all",
+      "icon": "ruler",
+      "title": {
+        "en": "Form settings",
+        "cn": "表单设置"
+      },
+      "summary": {
+        "en": "Type options first; hide what you don't fill.",
+        "cn": "类型选项为主；不填的字段隐藏。"
+      },
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": {
+            "en": "Form settings handles two things: turn common values (type, material, medium) into dropdown options, and hide fields you never fill so the form stays short. The button sits at the top right of the form.",
+            "cn": "表单设置主要管两件事：把常用的类型、材料做成下拉选项；把不填的字段藏起来，让表单短一点。入口在表单右上。"
+          }
+        },
+        {
+          "type": "image",
+          "src": "/guide/manager-form-settings-2.png",
+          "alt": {
+            "en": "Form settings drawer: Type options / Show & required / Hide.",
+            "cn": "表单设置抽屉：类型选项 / 显示与必填 / 隐藏。"
+          },
+          "caption": {
+            "en": "Form settings drawer: Type options / Show & required / Hide.",
+            "cn": "表单设置抽屉：类型选项 / 显示与必填 / 隐藏。"
+          },
+          "maxWidth": 430
+        },
+        {
+          "type": "kv",
+          "rows": [
+            {
+              "k": {
+                "en": "Type options",
+                "cn": "类型选项"
+              },
+              "v": {
+                "en": "The main one. Maintains the Type dropdown for this form — work types and material categories live here. Next time, pick from the dropdown instead of typing it again.",
+                "cn": "主要部分。维护这张表单的“类型”下拉候选——作品类型、材料类别都放这里。下次新建/编辑直接从下拉选，不用重复手打。"
+              }
+            },
+            {
+              "k": {
+                "en": "Hide",
+                "cn": "隐藏"
+              },
+              "v": {
+                "en": "Tick off fields you never fill and they disappear from the form. Hidden values are kept; required fields stay visible.",
+                "cn": "勾掉不填的字段，表单里就不显示。隐藏不删除已填内容；必填字段保持显示。"
+              }
+            },
+            {
+              "k": {
+                "en": "Show & required",
+                "cn": "显示与必填"
+              },
+              "v": {
+                "en": "Per field: show it, and decide whether it must be filled before submitting.",
+                "cn": "逐个字段控制是否显示、是否必填。必填会在提交时检查。"
+              }
+            },
+            {
+              "k": {
+                "en": "Save",
+                "cn": "保存"
+              },
+              "v": {
+                "en": "Each tab has its own Save. The form follows the new rules right away.",
+                "cn": "每个标签都有自己的保存按钮，改完点一下，表单立即按新规则显示。"
+              }
+            }
+          ]
+        },
+        {
+          "type": "note",
+          "tone": "info",
+          "text": {
+            "en": "New fields appear in the list automatically.",
+            "cn": "新增字段会自动出现在列表里。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "images",
+      "group": "all",
+      "icon": "image",
+      "title": {
+        "en": "Images",
+        "cn": "图片"
+      },
+      "summary": {
+        "en": "Upload, copy the URL, sync.",
+        "cn": "上传、复制地址、同步。"
+      },
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": {
+            "en": "One file, one record. Both languages share it.",
+            "cn": "一张图一条记录，中英文共用。"
+          }
+        },
+        {
+          "type": "image",
+          "src": "/guide/manager-image-buttons.png",
+          "alt": {
+            "en": "Image toolbar: Order Images, Hover Image, Sync Images (the number is missing covers).",
+            "cn": "图库工具栏：图片排序、悬停图、同步图片（数字是有多少封面没入库）。"
+          },
+          "caption": {
+            "en": "Image toolbar: Order Images, Hover Image, Sync Images (the number is missing covers).",
+            "cn": "图库工具栏：图片排序、悬停图、同步图片（数字是有多少封面没入库）。"
+          },
+          "maxWidth": 580
+        },
+        {
+          "type": "steps",
+          "items": [
+            {
+              "en": "Image library → New, upload the file, fill the tags and type, save.",
+              "cn": "图库 → 新建，上传文件，填标签和类型，保存。"
+            },
+            {
+              "en": "Copy img_url.",
+              "cn": "复制 img_url。"
+            },
+            {
+              "en": "Paste it into a cover or portrait field wherever you need it.",
+              "cn": "到需要的地方粘到封面或肖像字段。"
+            },
+            {
+              "en": "Run Sync Images to pull in covers that were never added to the library.",
+              "cn": "点“同步图片”，把还没入库的封面补进来。"
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "items": [
+            {
+              "en": "A number on the button means covers are still missing; grey means everything is in.",
+              "cn": "按钮显示数量：还有封面没入库；灰色：全部已入库。"
+            },
+            {
+              "en": "Sync adds new rows; existing rows stay as they are.",
+              "cn": "同步只新增，已有记录保持不变。"
+            },
+            {
+              "en": "One row per URL. Duplicates break matching and ordering.",
+              "cn": "一个地址只建一条，重复会让匹配和排序出错。"
+            },
+            {
+              "en": "While a cover field still points at the URL, a deleted image comes back on the next sync.",
+              "cn": "封面字段还引用这个地址时，删掉的图下次同步会补回来。"
+            }
+          ]
+        },
+        {
+          "type": "note",
+          "tone": "warning",
+          "text": {
+            "en": "A sync can add a lot at once. Check the cover URLs first.",
+            "cn": "一次可能补出很多条，先确认封面地址。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "ordering",
+      "group": "all",
+      "icon": "sort",
+      "title": {
+        "en": "Ordering",
+        "cn": "排序"
+      },
+      "summary": {
+        "en": "Drag, hide, save.",
+        "cn": "拖动、隐藏、保存。"
+      },
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": {
+            "en": "All order pages work the same way: pick a tab, drag, click the eye to hide, save. Dragging alone saves nothing.",
+            "cn": "排序页都是同一套操作：选标签、拖动、点眼睛隐藏、保存。只拖不保存等于没改。"
+          }
+        },
+        {
+          "type": "image",
+          "src": "/guide/manager-order-controls.png",
+          "alt": {
+            "en": "Top of an order page: order dimension, Reset, Save order.",
+            "cn": "排序页顶部：排序维度、重置、保存排序。"
+          },
+          "caption": {
+            "en": "Top of an order page: order dimension, Reset, Save order.",
+            "cn": "排序页顶部：排序维度、重置、保存排序。"
+          },
+          "maxWidth": 760
+        },
+        {
+          "type": "kv",
+          "rows": [
+            {
+              "k": {
+                "en": "Artwork order",
+                "cn": "作品排序"
+              },
+              "v": {
+                "en": "Artwork → Order page. Artist / Exhibition / Art Fair tabs are independent. Exhibition tab orders the Works block on a show page; Artist tab orders same-series related works on a work page. Art Fair is unused here.",
+                "cn": "作品 → 排序页。艺术家/展览/艺博会三个标签独立。展览页控制展览详情作品区；艺术家页控制作品详情同系列相关作品；艺博会本站没用。"
+              }
+            },
+            {
+              "k": {
+                "en": "Image order",
+                "cn": "图片排序"
+              },
+              "v": {
+                "en": "Image → Order Images. Rolling / detail rolling / exhibition / art fair. Rolling and art fair tabs store numbers; the public site uses the artwork, exhibition and image pages.",
+                "cn": "图库 → 图片排序。轮播/详情轮播/展览页/艺博会。轮播和艺博会标签保存编号；前台使用作品、展览和图片页。"
+              }
+            },
+            {
+              "k": {
+                "en": "Exhibition list",
+                "cn": "展览列表"
+              },
+              "v": {
+                "en": "Exhibition → Reorder only stores numbers; the list sorts by date. Ignore it.",
+                "cn": "展览 → 排序只存编号，前台按日期排，可以不管。"
+              }
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "src": "/guide/manager-order-card.png",
+          "alt": {
+            "en": "Drag handle top-left, eye top-right. The eye hides the card from the current page.",
+            "cn": "卡片左上角是拖动手柄，右上角是眼睛；眼睛把这张卡从当前页隐藏。"
+          },
+          "caption": {
+            "en": "Drag handle top-left, eye top-right. The eye hides the card from the current page.",
+            "cn": "卡片左上角是拖动手柄，右上角是眼睛；眼睛把这张卡从当前页隐藏。"
+          },
+          "maxWidth": 340
+        },
+        {
+          "type": "note",
+          "tone": "info",
+          "text": {
+            "en": "Hiding only affects the current tab. Unnumbered items sort after numbered ones.",
+            "cn": "眼睛只影响当前标签；没编号的排在已编号的后面。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "relations-marks",
+      "group": "all",
+      "icon": "tag",
+      "title": {
+        "en": "Relations & marks",
+        "cn": "关联与标记"
+      },
+      "summary": {
+        "en": "Multi-select links and the chips on cards.",
+        "cn": "多选关联和卡片上的标签。"
+      },
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": {
+            "en": "Relation fields are multi-selects: open the dropdown, search or click a row to select, click again to drop it. Options come from existing records and are filtered by language.",
+            "cn": "关联字段是多选：点开下拉，搜索或点一行选中，再点一次取消；选中的标签点 × 移除。选项来自已有记录，并按语言过滤。"
+          }
+        },
+        {
+          "type": "list",
+          "items": [
+            {
+              "en": "Artwork → Related exhibitions puts the work in that exhibition's Works block.",
+              "cn": "作品 → 关联画廊/展览：让作品出现在那个展览页的作品区。"
+            },
+            {
+              "en": "Exhibition → Related works / Related artists uses the same picker.",
+              "cn": "展览 → 相关作品 / 相关艺术家：同一套多选。"
+            },
+            {
+              "en": "Removing a chip unlinks only. Nothing is deleted.",
+              "cn": "移除只解除关联，不删记录。"
+            },
+            {
+              "en": "The dropdown lists existing records; create a new target first.",
+              "cn": "下拉只列已有记录；需要新目标就先建记录。"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": {
+            "en": "The chips on a card are marks. Red means hidden (⌀), green means a behaviour (★). The eye and mouse buttons on the order pages write them.",
+            "cn": "卡片上的小标签是标记。红色隐藏（⌀），绿色功能（★）。排序页的眼睛或鼠标按钮会写入标记。"
+          }
+        },
+        {
+          "type": "table",
+          "head": [
+            {
+              "en": "Mark",
+              "cn": "标记"
+            },
+            {
+              "en": "Where to set it",
+              "cn": "在哪设置"
+            }
+          ],
+          "rows": [
+            [
+              {
+                "en": "Hidden on artist page",
+                "cn": "在艺术家页隐藏"
+              },
+              {
+                "en": "Artwork order → Artist tab → eye (no artist page here).",
+                "cn": "作品排序 → 艺术家页 → 眼睛（本站无艺术家页）。"
+              }
+            ],
+            [
+              {
+                "en": "Hidden on exhibition page",
+                "cn": "在展览页隐藏"
+              },
+              {
+                "en": "Artwork order → Exhibition tab → eye; images: Image order → Exhibition tab.",
+                "cn": "作品排序 → 展览页 → 眼睛；图片在图片排序 → 展览页。"
+              }
+            ],
+            [
+              {
+                "en": "Hidden on art fair page",
+                "cn": "在艺博会页隐藏"
+              },
+              {
+                "en": "Artwork order → Art Fair tab (no such page here).",
+                "cn": "作品排序 → 艺博会页（本站无前台页）。"
+              }
+            ],
+            [
+              {
+                "en": "Rolling image hides",
+                "cn": "轮播图隐藏"
+              },
+              {
+                "en": "Image order → Rolling or detail rolling → eye (unused).",
+                "cn": "图片排序 → 轮播或详情轮播 → 眼睛（未使用）。"
+              }
+            ],
+            [
+              {
+                "en": "Artist name hover image",
+                "cn": "艺术家名称悬停图"
+              },
+              {
+                "en": "Image toolbar → Hover Image → mouse button (unused).",
+                "cn": "图库工具栏 → 悬停图 → 鼠标按钮（未使用）。"
+              }
+            ]
+          ]
+        },
+        {
+          "type": "note",
+          "tone": "info",
+          "text": {
+            "en": "No chips means nothing is hidden. A mark only affects its own page.",
+            "cn": "没标签就是没隐藏。标记只作用于它对应的页面。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "batch-meta",
+      "group": "all",
+      "icon": "table",
+      "title": {
+        "en": "Bulk edits, export, site settings",
+        "cn": "批量、导出、站点信息"
+      },
+      "summary": {
+        "en": "Table editing, CSV, footer and menus.",
+        "cn": "表格编辑、CSV、页脚与菜单。"
+      },
+      "blocks": [
+        {
+          "type": "steps",
+          "items": [
+            {
+              "en": "Filter the list first, then click Batch edit.",
+              "cn": "先筛选，再点批量编辑。"
+            },
+            {
+              "en": "Edit cells directly. Hide columns you don't need from the header.",
+              "cn": "表格里直接改；表头可以藏列。"
+            },
+            {
+              "en": "Save once. No undo, so export a CSV first.",
+              "cn": "保存一次。没有撤销，先导出 CSV。"
+            },
+            {
+              "en": "Export CSV exports the filtered set.",
+              "cn": "导出的是当前筛选结果。"
+            }
+          ]
+        },
+        {
+          "type": "steps",
+          "items": [
+            {
+              "en": "Menu → Settings → Site Meta, or open /manager/meta.",
+              "cn": "菜单 → 设置 → 站点信息，或开 /manager/meta。"
+            },
+            {
+              "en": "Footer, menus, SEO and type options all live here.",
+              "cn": "页脚、菜单、SEO、类型选项都在这里。"
+            },
+            {
+              "en": "Menus are edited per interface language; switch language top-right for the other set.",
+              "cn": "菜单按界面语言分开；右上角切语言改另一套。"
+            },
+            {
+              "en": "Save, then reload the public site.",
+              "cn": "保存后回前台刷新。"
+            }
+          ]
+        },
+        {
+          "type": "note",
+          "tone": "info",
+          "text": {
+            "en": "The Meta record beats the JSON defaults, and menu changes hit both the public and manager navigation.",
+            "cn": "Meta 记录优先于代码里的 JSON；菜单改动同时影响前台和后台。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "problems",
+      "group": "all",
+      "icon": "help",
+      "title": {
+        "en": "Troubleshooting",
+        "cn": "排错"
+      },
+      "summary": {
+        "en": "Check the obvious first.",
+        "cn": "先看这几条。"
+      },
+      "blocks": [
+        {
+          "type": "table",
+          "head": [
+            {
+              "en": "Symptom",
+              "cn": "现象"
+            },
+            {
+              "en": "Cause",
+              "cn": "原因"
+            },
+            {
+              "en": "Fix",
+              "cn": "怎么办"
+            }
+          ],
+          "rows": [
+            [
+              {
+                "en": "Page keeps loading",
+                "cn": "页面一直加载"
+              },
+              {
+                "en": "Data hasn't come back",
+                "cn": "数据没回来"
+              },
+              {
+                "en": "Wait, then refresh.",
+                "cn": "等一下再刷新。"
+              }
+            ],
+            [
+              {
+                "en": "Not visible on the site",
+                "cn": "前台不显示"
+              },
+              {
+                "en": "Wrong language, or hidden by a mark",
+                "cn": "语言不对，或被标记隐藏"
+              },
+              {
+                "en": "Check the language and the chips.",
+                "cn": "看语言和卡片标签。"
+              }
+            ],
+            [
+              {
+                "en": "Order didn't apply",
+                "cn": "排序没生效"
+              },
+              {
+                "en": "Save wasn't pressed",
+                "cn": "没点保存排序"
+              },
+              {
+                "en": "Save, then reload.",
+                "cn": "保存后再看。"
+              }
+            ],
+            [
+              {
+                "en": "Option missing in a dropdown",
+                "cn": "下拉没有选项"
+              },
+              {
+                "en": "The dropdown lists existing records",
+                "cn": "下拉只列已有记录"
+              },
+              {
+                "en": "Create it first.",
+                "cn": "先建再关联。"
+              }
+            ],
+            [
+              {
+                "en": "Sync button is grey",
+                "cn": "同步按钮是灰的"
+              },
+              {
+                "en": "All covers are in",
+                "cn": "封面全部已入库"
+              },
+              {
+                "en": "Skip it.",
+                "cn": "可以跳过。"
+              }
+            ],
+            [
+              {
+                "en": "Edits don't show",
+                "cn": "改完前台没变"
+              },
+              {
+                "en": "Browser cache",
+                "cn": "浏览器缓存"
+              },
+              {
+                "en": "Hard refresh.",
+                "cn": "硬刷新。"
+              }
+            ],
+            [
+              {
+                "en": "A field disappeared",
+                "cn": "字段不见了"
+              },
+              {
+                "en": "Hidden in Form settings",
+                "cn": "被表单设置藏了"
+              },
+              {
+                "en": "Turn it back on under Show & required or Hide.",
+                "cn": "去“显示与必填”或“隐藏”里打开。"
+              }
+            ],
+            [
+              {
+                "en": "Form won't submit",
+                "cn": "提交不了"
+              },
+              {
+                "en": "Required field is empty",
+                "cn": "必填项没填"
+              },
+              {
+                "en": "Look for the red field.",
+                "cn": "看标红的字段。"
+              }
+            ]
+          ]
+        },
+        {
+          "type": "note",
+          "tone": "info",
+          "text": {
+            "en": "Still stuck? Send the page and the steps to the developer.",
+            "cn": "还不行就把页面和操作步骤发给开发。"
+          }
+        }
+      ]
+    }
+  ]
+}

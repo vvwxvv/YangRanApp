@@ -1,0 +1,319 @@
+generator client { 
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("MONGODB_URL")
+  //provider = "postgresql"
+  //url      = env("DATABASE_URL")
+}
+
+model Users{
+  id String @id @default(auto()) @map("_id") @db.ObjectId
+  username String
+  email String @unique
+  password String
+  createdAt DateTime @default(now())
+  lastLoginAt DateTime?
+}
+
+model Artwork {
+  id                            String   @id @default(auto()) @map("_id") @db.ObjectId
+  artist                       String?
+  title          String?
+  cover_image_url               String?
+  type           String?
+  medium         String?
+  year           String?
+  size           String?
+  series         String?
+  caption        String?
+  duration       String?
+  credits        String?
+  special_thanks String?
+  introduction   String[]
+  venue          String?
+  country        String?
+  video_url      String?
+  web_url        String?
+  work_value     String?
+  sold           String?
+  relatedWebs    String[]
+  related_exhibition   String[]
+  order          Json?
+  mark           Json?
+  tag            String[]
+  language       String?
+  updatedAt      DateTime @updatedAt
+}
+
+model Video {
+  id         String   @id @default(auto()) @map("_id") @db.ObjectId
+  video_url  String?
+  tag_en     String?
+  tag_cn     String?
+  type       String?
+  caption_en String?
+  caption_cn String?
+  mark       Json?
+  tag_source String?
+  order      String?
+  updatedAt  DateTime @updatedAt
+}
+
+model Series {
+  id             String   @id @default(auto()) @map("_id") @db.ObjectId
+  cover_img_url  String?
+  artist         String?
+  title          String?
+  type           String?
+  medium         String?
+  year           String?
+  caption        String?
+  credits        String?
+  special_thanks String?
+  introduction   String[]
+  order          String?
+  mark           String?
+  tag            String[]
+  language       String?
+  updatedAt      DateTime @updatedAt
+}
+
+model Resume {
+  id           String   @id @default(auto()) @map("_id") @db.ObjectId
+  artist       String?
+  year         String?
+  start_date   String?
+  end_date     String?
+  type         String?
+  description  String?
+  introduction String[]
+  mark         String?
+  language     String?
+  updatedAt    DateTime @updatedAt
+}
+
+model Web {
+  id         String   @id @default(auto()) @map("_id") @db.ObjectId
+  web_url    String?
+  tag_en     String?
+  tag_cn     String?
+  type       String?
+  caption_en String?
+  caption_cn String?
+  mark       Json?
+  tag_source String?
+  order      String?
+  updatedAt  DateTime @updatedAt
+}
+
+model Writing {
+  id            String   @id @default(auto()) @map("_id") @db.ObjectId
+  cover_img_url String?
+  author        String?
+  title         String?
+  subtitle      String?
+  summary       String?
+  keywords      String?
+  category      String?
+  type          String?
+  year          String?
+  paragraphs    String[]
+  caption       String?
+  status        String?
+  mark          Json?
+  tag            String[]
+  language      String?
+  createdAt     DateTime @default(now()) @map("created_at")
+  updatedAt     DateTime @updatedAt @map("updated_at")
+}
+
+
+model Event {
+  id                    String   @id @default(auto()) @map("_id") @db.ObjectId
+  cover_img_url         String?
+  title                 String?
+  subtitle              String?
+  year                  String?
+  date_time             String?
+  type                  String?
+  host                  String?
+  support               String?
+  special_thanks        String?
+  venue                 String?
+  address               String?
+  caption               String?
+  introduction          String[]
+  related_artist        String[]
+  web_url               String?
+  video_url             String?
+  relatedWebs           String[]
+  mark                  Json?
+  order                 String?
+  language              String?
+  updatedAt             DateTime @updatedAt
+}
+
+model Bibliography{
+  id String @id @default(auto()) @map("_id") @db.ObjectId
+  related_exhibition   String[]
+  title String?
+  subtitle String?
+  cover_img_url String?
+  author String?
+  type String?
+  year String?
+  date String?
+  published_at String?
+  related_artist        String[]
+  pdf_url String?
+  web_url String?
+  video_url String?
+  order String?
+  language              String?
+  mark                  Json?
+  updatedAt DateTime @updatedAt
+}
+
+model Enquire {
+  id              String   @id @default(auto()) @map("_id") @db.ObjectId
+  name            String
+  email           String
+  message         String?
+  createdAt       DateTime @default(now())
+  status          String?  @default("Pending") // e.g., Pending, Responded, Closed
+}
+
+model Image {
+  id           String   @id @default(auto()) @map("_id") @db.ObjectId
+  img_url      String?
+  tag_en       String?
+  tag_cn       String?
+  type         String?
+  caption_en   String?
+  caption_cn   String?
+  mark         Json?
+  tag_source   String?
+  order        Json?
+}
+
+model Exhibition {
+  id                    String     @id @default(auto()) @map("_id") @db.ObjectId
+  title                 String?   
+  subtitle              String?    
+  type                  String? 
+  date_start            String?
+  date_end              String?
+  opening_date          String?
+  year                  String?
+  venue                 String?   
+  location              String?   
+  curator               String?
+  organiser             String?    
+  participating_artists String?   
+  caption               String?
+  description           String?
+  introduction          String[]   
+  press_release         String[]
+  related_artwork       Json? 
+  related_artist    String[]
+  cover_img_url         String?
+  web_url               String?
+  video_url             String?
+  language              String?
+  order                 String?
+  mark                  Json?
+  status                String?   
+  updatedAt             DateTime   @updatedAt
+}
+
+
+model About{
+  id String @id @default(auto()) @map("_id") @db.ObjectId
+  artist String?
+  portrait_image_url String?
+  caption String?
+  introductions String[]
+  pdf_url String?
+  web_url String?
+  language String?
+  order String?
+  mark Json?
+}
+
+model ArtistContact{
+  id String @id @default(auto()) @map("_id") @db.ObjectId
+  artistName String?      
+  email String?
+  phone String?
+  address String[]
+  socialMedia Json?
+  web_url String?
+  language String?
+}
+
+model Subscribe {
+  id String @id @default(auto()) @map("_id") @db.ObjectId
+  name String
+  email String @unique
+  isActive Boolean @default(true)
+  createdAt DateTime @default(now())
+}
+
+model Meta {
+  id                      String   @id @default(auto()) @map("_id") @db.ObjectId
+
+  // ── App identity ────────────────────────────────────────────────────────
+  app_title_en            String?
+  app_title_cn            String?
+  app_type                String?
+  app_category            String?
+  app_version             String?
+  app_purpose             String?
+  app_description_en      String?
+  app_description_cn      String?
+
+  // ── Footer ──────────────────────────────────────────────────────────────
+  app_footer_en           String?
+  app_footer_cn           String?
+  app_footer_start_year   Int?
+  app_footer_rights_en    String?
+  app_footer_rights_cn    String?
+
+  // ── Website ─────────────────────────────────────────────────────────────
+  web_url                 String?
+
+  // ── Menus / SEO / entity + form settings ────────────────────────────────
+  menu                    Json?
+  seo                     Json?
+  galleryEntities         Json?
+  formTypes               Json?
+
+  updatedAt               DateTime @updatedAt
+}
+
+// ── Form settings ──────────────────────────────────────────────────────────
+// One document per admin form ("artwork", "event", "exhibition" …).
+//
+// `sections` and `fields` are OBJECTS keyed by name, not arrays, so one toggle
+// is a `$set` of a single key instead of rewriting the whole list:
+//
+//   sections: { "details":  { "visible": false } }
+//   fields:   { "credits":  { "visible": false, "required": false },
+//               "title":    { "required": true },
+//               "series":   { "essential": true } }
+//
+// `discovered` is the snapshot of the code-declared schema that the form posts
+// the first time it is opened, so the settings page never needs a hard-coded
+// registry of sections/fields.
+model FormSetting {
+  id         String   @id @default(auto()) @map("_id") @db.ObjectId
+  formKey    String   @unique
+  layout     Json?
+  sections   Json?
+  fields     Json?
+  discovered Json?
+  updatedAt  DateTime @updatedAt
+}
